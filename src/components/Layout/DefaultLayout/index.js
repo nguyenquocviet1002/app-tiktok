@@ -3,7 +3,7 @@ import Sidebar from './Sidebar';
 
 function DefaultLayout({ children }) {
   return (
-    <div>
+    <div className="container">
       <Header />
       <div className="container">
         <Sidebar />
