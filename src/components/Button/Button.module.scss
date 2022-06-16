@@ -37,3 +37,8 @@
     color: #000;
   }
 }
+
+.icon + .title,
+.title + .icon {
+  margin-left: 8px;
+}
