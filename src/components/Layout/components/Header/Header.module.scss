@@ -38,13 +38,25 @@
         padding: 10px 10px;
       }
     }
-    .active {
+    .actions {
       display: flex;
       align-items: center;
       .more-btn {
         margin-left: 20px;
         font-size: 20px;
         padding: 8px;
+      }
+      .action-btn {
+        padding: 6px 16px;
+        border: none;
+        background-color: transparent;
+        font-size: 20px;
+      }
+      .user-avatar {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        margin-left: 20px;
       }
     }
   }

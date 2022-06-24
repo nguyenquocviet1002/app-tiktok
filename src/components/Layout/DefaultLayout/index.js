@@ -6,8 +6,10 @@ function DefaultLayout({ children }) {
     <div className="container">
       <Header />
       <div className="container">
-        <Sidebar />
-        <div className="content">{children}</div>
+        <div className="flex">
+          <Sidebar />
+          <div className="content">{children}</div>
+        </div>
       </div>
     </div>
   );
