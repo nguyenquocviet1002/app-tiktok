@@ -1,26 +1,23 @@
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
+import { Link } from 'react-router-dom';
 import styles from './AccountItem.module.scss';
 
 const cx = classNames.bind(styles);
 
-function AccountItem() {
+function AccountItem({ data }) {
   return (
-    <div className={cx('wrapper')}>
-      <img
-        className={cx('info-avt')}
-        src="https://yt3.ggpht.com/yti/APfAmoGQBo-psr7bUJokXYOPkXhl-t1k7f9D_sutuztHWQ=s88-c-k-c0x00ffffff-no-rj-mo"
-        alt="1"
-      />
+    <Link to={`/@${data.nickname}`} className={cx('wrapper')}>
+      <img className={cx('info-avt')} src={data.avatar} alt={data.full_name} />
       <div className={cx('info')}>
         <p className={cx('name')}>
-          <span>hahaha</span>
-          <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />
+          <span>{data.full_name}</span>
+          {data.tick && <FontAwesomeIcon className={cx('check')} icon={faCheckCircle} />}
         </p>
-        <span className={cx('user-name')}>@hhahaha</span>
+        <span className={cx('user-name')}>{data.nickname}</span>
       </div>
-    </div>
+    </Link>
   );
 }
 
